@@ -1,17 +1,16 @@
 <ion-card>
-  <img src="img/nin-live.png"/>
-  <ion-card-content>
-    <ion-card-title>
-      The Swing ballroom
-      </ion-card-title>
-    <p>
-      The most popular industrial group ever, and largely
-      responsible for bringing the music to a mass audience.
-    </p>
-  </ion-card-content>
-  <ion-item>
-    <ion-icon name="navigate" item-left large ></ion-icon>
-    <h2>Institute of Fine Cocktails</h2>
-    <p>14 S. Hop Avenue, Madison, WI 53703</p>
-  </ion-item>
-</ion-card>
+    <img src="img/nin-live.png"/>
+    <ion-card-content>
+      <ion-card-title>
+      {{name}}
+        </ion-card-title>
+      <p>
+        {{description}}
+      </p>
+    </ion-card-content>
+    <ion-item>
+      <ion-icon name="navigate" item-left large ></ion-icon>
+      <h2>{{place}}</h2>
+      <p>{{addr}}</p>
+    </ion-item>
+  </ion-card>

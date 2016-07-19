@@ -3,7 +3,7 @@
     <button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>EVENTOS</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -12,7 +12,23 @@
 
 {{days[0]}}
 
-<event-item></event-item>
-
-
+<div *ngFor="let evento of eventos">
+  <ion-card>
+    <img src="img/nin-live.png"/>
+    <ion-card-content>
+      <ion-card-title>
+      {{evento.name}}
+        </ion-card-title>
+      <p>
+        {{evento.description}}
+      </p>
+    </ion-card-content>
+    <ion-item>
+      <ion-icon name="navigate" item-left large ></ion-icon>
+      <h2>{{evento.place}}</h2>
+      <p>{{evento.addr}}</p>
+    </ion-item>
+  </ion-card>
+  <event-item [evento] = "evento"></event-item>
+</div>
 </ion-content>
