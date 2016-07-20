@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Event } from './EventModel';
 @Component({
 	selector: 'event-item',
@@ -6,7 +6,7 @@ import { Event } from './EventModel';
 })
 
 export class EventItem {
-	evento: Event;
+	@Input() evento: Event;
 	constructor(){
 	}
 };
